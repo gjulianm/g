@@ -38,7 +38,7 @@ __gcomp()
 _g()
 {
     local c=1 command
-    opts=$(g list --keys)
+    opts=$(go list --keys)
 
     while [ $c -lt $COMP_CWORD ]; do
         command="${COMP_WORDS[c]}"

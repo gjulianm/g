@@ -18,13 +18,13 @@
 
 # Print the usage string.
 usage() {
-    echo "usage: g [-h | --help] [-v | --version] <command> <args>"
+    echo "usage: go [-h | --help] [-v | --version] <command> <args>"
 }
 
 # Print the help message.
 help() {
     usage
-    echo -e "\nThe g command are:"
+    echo -e "\nThe go command are:"
     echo -e "   add\tAdd a new shortcut."
     echo -e "   rm\tRemove a shorcut."
     echo -e "   list\tList all the available shortcuts."
@@ -61,7 +61,7 @@ save_shortcuts() {
 }
 
 # The main function for this script.
-g() {
+go() {
     version="0.1"
     cmd="$1"
     gfile=$HOME/.gfile
@@ -76,14 +76,14 @@ g() {
     # Parse the command.
     case "$cmd" in
     -v | --version)
-        echo "g version: $version"
+        echo "go version: $version"
         ;;
     -h | --help)
         help
         ;;
     add)
         if [ "$#" != "3" ]; then
-            echo "usage: g add <name> <path>"
+            echo "usage: go add <name> <path>"
             return
         fi
         get_shortcuts
