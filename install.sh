@@ -22,3 +22,4 @@ cp ./g.sh ./gcompletion.sh $install_dir
 echo "Created install directory $install_dir"
 
 install_to_rc $HOME/.bashrc
+install_to_rc $HOME/.zshrc
